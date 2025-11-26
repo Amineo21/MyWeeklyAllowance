@@ -1,7 +1,19 @@
 {
-    "name": "myweekly/allowance",
-    "type": "library",
-    "require-dev": {
-        "phpunit/phpunit": "^11.5"
+  "name": "myweekly/allowance",
+  "description": "MyWeeklyAllowance - Money management app for teenagers",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "MyWeeklyAllowance\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MyWeeklyAllowance\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0"
+  }
 }

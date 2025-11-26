@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'myweekly/allowance',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'a497ccaeff4476a6084d10937d8e07628648f753',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => true,
         ),
         'myweekly/allowance' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'a497ccaeff4476a6084d10937d8e07628648f753',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

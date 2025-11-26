@@ -16,6 +16,11 @@ class ComposerStaticInita5db59165d578213bab598ec5f44d5f1
         array (
             'PhpParser\\' => 10,
         ),
+        'M' => 
+        array (
+            'MyWeeklyAllowance\\Tests\\' => 24,
+            'MyWeeklyAllowance\\' => 18,
+        ),
         'D' => 
         array (
             'DeepCopy\\' => 9,
@@ -26,6 +31,14 @@ class ComposerStaticInita5db59165d578213bab598ec5f44d5f1
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'MyWeeklyAllowance\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'MyWeeklyAllowance\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'DeepCopy\\' => 
         array (
