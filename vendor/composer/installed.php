@@ -3,7 +3,7 @@
         'name' => 'myweekly/allowance',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'a497ccaeff4476a6084d10937d8e07628648f753',
+        'reference' => 'c58b719232091497694402538b28255ccbe2462c',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'myweekly/allowance' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a497ccaeff4476a6084d10937d8e07628648f753',
+            'reference' => 'c58b719232091497694402538b28255ccbe2462c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
