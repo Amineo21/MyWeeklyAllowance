@@ -1,0 +1,7 @@
+{
+    "name": "myweekly/allowance",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
