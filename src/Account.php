@@ -1,7 +1,25 @@
 <?php
 
+/**
+ * MyWeeklyAllowance - Classe de Gestion de Compte
+ * 
+ * Cette classe gère un portefeuille virtuel pour les adolescents.
+ * Les parents peuvent déposer de l'argent, enregistrer des dépenses et fixer des allocations hebdomadaires.
+ * 
+ * @package MyWeeklyAllowance
+ * @author Ahmed
+ * @version 1.0.0
+ */
+
 namespace MyWeeklyAllowance;
 
+/**
+ * Classe Account
+ * 
+ * Représente le compte de portefeuille virtuel d'un adolescent avec suivi des transactions.
+ * 
+ * @package MyWeeklyAllowance
+ */
 class Account
 {
     private string $name;
@@ -12,34 +30,65 @@ class Account
 
     // ============ CONSTRUCTEUR ============
     
+    /**
+     * Construit un nouveau compte
+     * 
+     * @param string $name Le nom de l'adolescent
+     * @param string $email L'adresse email de l'adolescent
+     */
     public function __construct(string $name, string $email)
     {
         $this->name = $name;
         $this->email = $email;
     }
 
-    // ============ GETTERS ============
+    // ============ ACCESSEURS ============
     
+    /**
+     * Récupère le nom du titulaire du compte
+     * 
+     * @return string Le nom
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * Récupère l'email du titulaire du compte
+     * 
+     * @return string L'adresse email
+     */
     public function getEmail(): string
     {
         return $this->email;
     }
 
+    /**
+     * Récupère le solde actuel du compte
+     * 
+     * @return float Le solde actuel
+     */
     public function getBalance(): float
     {
         return $this->balance;
     }
 
+    /**
+     * Récupère le montant de l'allocation hebdomadaire
+     * 
+     * @return float L'allocation hebdomadaire
+     */
     public function getWeeklyAllowance(): float
     {
         return $this->weeklyAllowance;
     }
 
+    /**
+     * Récupère l'historique des transactions
+     * 
+     * @return array Tableau de toutes les transactions avec type, montant et horodatage
+     */
     public function getTransactionHistory(): array
     {
         return $this->transactionHistory;
@@ -48,10 +97,11 @@ class Account
     // ============ DEPOT D'ARGENT ============
     
     /**
-     * Déposer de l'argent sur le compte
+     * Dépose de l'argent sur le compte
      * 
      * @param float $amount Le montant à déposer
-     * @throws InvalidArgumentException Si le montant est négatif ou zéro
+     * @throws \InvalidArgumentException Si le montant est négatif ou nul
+     * @return void
      */
     public function deposit(float $amount): void
     {
@@ -66,10 +116,11 @@ class Account
     // ============ RETRAIT/DEPENSE ============
     
     /**
-     * Retirer de l'argent du compte
+     * Retire de l'argent du compte
      * 
      * @param float $amount Le montant à retirer
-     * @throws InvalidArgumentException Si le montant est négatif, zéro ou supérieur au solde
+     * @throws \InvalidArgumentException Si le montant est négatif, nul ou dépasse le solde
+     * @return void
      */
     public function withdraw(float $amount): void
     {
@@ -88,10 +139,11 @@ class Account
     // ============ ALLOCATION HEBDOMADAIRE ============
     
     /**
-     * Définir l'allocation hebdomadaire
+     * Définit le montant de l'allocation hebdomadaire
      * 
-     * @param float $amount Le montant de l'allocation
-     * @throws InvalidArgumentException Si le montant est négatif
+     * @param float $amount Le montant de l'allocation hebdomadaire
+     * @throws \InvalidArgumentException Si le montant est négatif
+     * @return void
      */
     public function setWeeklyAllowance(float $amount): void
     {
@@ -103,7 +155,9 @@ class Account
     }
 
     /**
-     * Recevoir l'allocation hebdomadaire
+     * Reçoit l'allocation hebdomadaire (l'ajoute au solde)
+     * 
+     * @return void
      */
     public function receiveWeeklyAllowance(): void
     {
@@ -114,10 +168,11 @@ class Account
     // ============ HISTORIQUE DES TRANSACTIONS ============
     
     /**
-     * Enregistrer une transaction dans l'historique
+     * Enregistre une transaction dans l'historique
      * 
-     * @param string $type Le type de transaction (deposit, withdrawal, allowance)
+     * @param string $type Le type de transaction (dépôt, retrait, allocation)
      * @param float $amount Le montant de la transaction
+     * @return void
      */
     private function recordTransaction(string $type, float $amount): void
     {
